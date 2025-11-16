@@ -193,3 +193,79 @@ body {
   background-color: var(--text-color);
   color: var(--base-color);
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main {
+    padding: 6rem 1rem;
+  }
+  /* HERO TEXT SIZE */
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  /* EDUCATION SECTION */
+  .education__card {
+    padding: 1rem;
+  }
+
+  .education__card-date {
+    float: none;
+    display: block;
+    margin-top: 1rem;
+    color: var(--text-color-secondary);
+  }
+
+  /* PROJECT SECTION */
+  .projects__card {
+    flex-direction: column; /* Stack image + content */
+  }
+
+  /* Remove alternating reverse order on small screens */
+  .projects__card:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .projects__card-img {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Auto size to keep ratio */
+    max-height: 200px; /* optional */
+    object-fit: cover;
+  }
+
+  .projects__card-body {
+    padding: 1.5rem 1rem;
+  }
+
+  /* CONTACT */
+  .contact {
+    margin-bottom: 4rem;
+  }
+
+  .contact__input {
+    padding: 0.75rem;
+  }
+
+  .contact__btn {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .projects__card-body {
+    padding: 1rem;
+  }
+
+  .projects__card-text {
+    font-size: 0.9rem;
+  }
+}
