@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Muhammad Ikhsan Basuki</title>
+  </head>
+  <body>
+    <!-- Background particles -->
+    <!-- <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div> -->
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <div class="navbar__logo">MIB</div>
+        <ul class="navbar__menu">
+          <!-- <li class="navbar__item">
+            <a href="#home" class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#education" class="navbar__link">Education</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#projects" class="navbar__link">Projects</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#contact" class="navbar__link">Contact</a>
+          </li> -->
+        </ul>
+        <label for="base-color-input" class="navbar__color"
+          >Background:
+          <input type="color" id="base-color-input" oninput="setColor(this)" />
+        </label>
+      </div>
+    </nav>
+
+    <!-- Contents -->
+    <main class="main">
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero">
+        <div class="hero__container">
+          <h1 class="hero__title">
+            Hi, my name is <br />
+            <span class="hero__name">Muhammad Ikhsan Basuki</span>
+          </h1>
+          <p class="hero__subtitle">I'm an university student major in IT</p>
+          <!-- <a href="#projects" class="hero__btn btn">See my work</a> -->
+        </div>
+      </section>
+
+      <!-- EDUCATION SECTION -->
+      <div class="education" id="education">
+        <h2 class="education__title">Education</h2>
+        <p class="education__text">My education</p>
+        <div class="education__card-container">
+          <div class="education__card">
+            <div class="education__card-title">
+              SMKN 4 Kota Bogor
+              <span class="education__card-date">2021 - 2024</span>
+            </div>
+            <div class="education__card-text">
+              Jurusan Rekayasa Perangkat Lunak
+            </div>
+          </div>
+          <div class="education__card">
+            <div class="education__card-title">
+              Universitas Bina Sarana Informatika
+              <span class="education__card-date">2024 - Now</span>
+            </div>
+            <div class="education__card-text">
+              Jurusan Sistem Informasi (S1)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTS SECTION -->
+      <section class="projects" id="projects">
+        <h2 class="projects__title">Projects</h2>
+        <p class="projects__text">Here are some of my projects</p>
+        <div class="projects__card-container">
+          <div class="projects__card">
+            <img
+              src="assets/images/image.png"
+              alt="image"
+              class="projects__card-img"
+            />
+            <div class="projects__card-body">
+              <div class="projects__card-title">Card title</div>
+              <div class="projects__card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Officiis id itaque qui vitae explicabo nostrum sint accusantium
+                blanditiis rem ipsam?
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact" id="contact">
+        <h2 class="contact__title">Contact</h2>
+        <form
+          class="contact__form"
+          action="mailto:mikhsanb546+portofolio@gmail.com"
+        >
+          <div class="contact__field">
+            <label for="name" class="contact__label">Name</label>
+            <input type="text" name="name" id="name" class="contact__input" />
+          </div>
+          <div class="contact__field">
+            <label for="email" class="contact__label">Email</label>
+            <input type="text" name="email" id="email" class="contact__input" />
+          </div>
+          <div class="contact__field">
+            <label for="message" class="contact__label">Message</label>
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              class="contact__input"
+              rows="3"
+            ></textarea>
+          </div>
+          <button type="submit" class="contact__btn">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <aside class="accounts">
+      <ul class="accounts__menu">
+        <li class="accounts__item">
+          <a
+            href="mailto:mikhsanb546+portofolio@gmail.com"
+            class="accounts__link"
+            target="_blank"
+            >󰊫</a
+          >
+        </li>
+        <li class="accounts__item">
+          <a
+            href="https://github.com/MIkhsanB546"
+            target="_blank"
+            class="accounts__link"
+            ></a
+          >
+        </li>
+        <li class="accounts__item">
+          <a
+            href="https://www.instagram.com/mikhsanb546"
+            target="_blank"
+            class="accounts__link"
+            ></a
+          >
+        </li>
+      </ul>
+    </aside>
+
+    <footer>
+      <!-- <ul>
+        <li>Home</li>
+        <li>Projects</li>
+        <li>Contact</li>
+      </ul> -->
+    </footer>
+
+    <a href="#" class="top">&#8593;</a>
+
+    <script>
+      function setColor(input) {
+        const lightness = getLightnessFromHex(input.value);
+
+        document.documentElement.style.setProperty("--base-color", input.value);
+        document.documentElement.style.setProperty(
+          "--text-color",
+          lightness > 60 ? "black" : "white"
+        );
+
+        localStorage.setItem("baseColor", input.value);
+      }
+
+      function getLightnessFromHex(hex) {
+        hex = hex.replace(/^#/, "");
+
+        const r = parseInt(hex.substr(0, 2), 16);
+        const g = parseInt(hex.substr(2, 2), 16);
+        const b = parseInt(hex.substr(4, 2), 16);
+        const brightness = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+
+        return +(brightness * 100).toFixed(2);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const savedColor = localStorage.getItem("baseColor");
+
+        if (savedColor) {
+          const lightness = getLightnessFromHex(savedColor);
+
+          document.documentElement.style.setProperty(
+            "--base-color",
+            savedColor
+          );
+          document.documentElement.style.setProperty(
+            "--text-color",
+            lightness > 60 ? "black" : "white"
+          );
+
+          // Update your input UI if needed
+          const input = document.getElementById("base-color-input");
+          if (input) input.value = savedColor;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+@import "variables.css";
+@import "layout.css";
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto_regular.ttf);
+}
+
+@font-face {
+  font-family: "Firacode Nerd";
+  src: url(../fonts/FiraCode_Nerd_Font_Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: Roboto, Arial, Helvetica, sans-serif; */
+  font-family: "Firacode Nerd", "Courier New", Courier, monospace;
+  /* background-color: #0ea4e92a; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--base-color);
+  color: var(--text-color);
+}
+
+.main {
+  max-width: 700px;
+  margin-inline: auto;
+  padding: 10rem 0;
+}
+
+.hero {
+  margin-bottom: 8rem;
+}
+
+.hero__title {
+}
+
+.hero__name {
+  color: var(--accent-color);
+}
+
+.hero__subtitle {
+  color: var(--text-color-secondary);
+  /* margin-bottom: 1rem; */
+}
+
+.hero__btn {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.education {
+  margin-bottom: 8rem;
+}
+
+.education__title {
+  margin-bottom: 1rem;
+}
+
+.education__text {
+  margin-bottom: 4rem;
+  color: var(--text-color-secondary);
+}
+
+.education__card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.education__card {
+  padding: 1rem 1.5rem;
+  background-color: var(--surface-color);
+  border-left: 4px solid var(--accent-color);
+}
+
+.education__card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.education__card-date {
+  font-size: 1rem;
+  font-weight: 400;
+  float: inline-end;
+}
+
+.education__card-text {
+  /* color: var(--text-color-secondary); */
+}
+
+.projects {
+  margin-bottom: 8rem;
+}
+
+.projects__title {
+  margin-bottom: 1rem;
+}
+
+.projects__text {
+  margin-bottom: 4rem;
+  color: var(--text-color-secondary);
+}
+
+.projects__card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.projects__card {
+  display: flex;
+  align-items: center;
+  /* gap: 2rem; */
+  flex-wrap: wrap;
+  background-color: var(--surface-color);
+}
+
+.projects__card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.projects__card-img {
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.projects__card-body {
+  padding: 2rem;
+  flex: 1;
+}
+
+.projects__card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.projects__card-text {
+  color: var(--text-color-secondary);
+}
+
+.contact__title {
+  margin-bottom: 2rem;
+}
+
+.contact__field {
+  margin-bottom: 2rem;
+}
+
+.contact__label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  background-color: var(--base-color);
+  border: 1px solid var(--text-color-secondary);
+  color: var(--text-color);
+  resize: vertical;
+  transition: 0.3s ease;
+}
+
+.contact__input:focus {
+  border: 1px solid var(--text-color);
+}
+
+.contact__btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  font-weight: bold;
+  border: 1px solid var(--text-color-secondary);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact__btn:hover {
+  background-color: var(--text-color);
+  color: var(--base-color);
+}

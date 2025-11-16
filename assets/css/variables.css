@@ -1,0 +1,8 @@
+:root {
+  /* colors */
+  --base-color: #01010b;
+  --surface-color: oklch(from var(--base-color) calc(l * 1.2) c h);
+  --accent-color: oklch(from var(--base-color) calc(l * 3) calc(c * 5) h);
+  --text-color: #f0f0f0;
+  --text-color-secondary: oklch(from var(--text-color) l c h / 0.5);
+}

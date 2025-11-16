@@ -1,0 +1,103 @@
+.navbar {
+  width: 100vw;
+  padding: 20px 30px;
+  background: var(--base-color);
+  color: var(--text-color);
+  z-index: 6;
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* .navbar__items {
+} */
+
+.navbar__link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: var(--accent-color);
+}
+
+.navbar__color {
+  padding: 0.5rem 1rem;
+  background-color: var(--surface-color);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.navbar__color:hover {
+  background-color: oklch(from var(--surface-color) calc(l * 1.1) c h);
+}
+
+#base-color-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navbar__color:hover {
+}
+
+.top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+  opacity: 0.8;
+}
+
+.top:hover {
+  background-color: var(--accent-color);
+}
+
+.accounts {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+}
+
+.accounts__menu {
+  list-style: none;
+}
+
+.accounts__item {
+  gap: 20px;
+}
+
+.accounts__link {
+  font-size: 2rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
