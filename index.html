@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/normalize.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
     <title>Muhammad Ikhsan Basuki</title>
   </head>
   <body>
@@ -44,7 +45,12 @@
     <!-- Contents -->
     <main class="main">
       <!-- HERO SECTION -->
-      <section class="hero" id="hero">
+      <section
+        class="hero"
+        id="hero"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
         <div class="hero__container">
           <h1 class="hero__title">
             Hi, my name is <br />
@@ -56,7 +62,12 @@
       </section>
 
       <!-- EDUCATION SECTION -->
-      <div class="education" id="education">
+      <div
+        class="education"
+        id="education"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
         <h2 class="education__title">Education</h2>
         <p class="education__text">My education</p>
         <div class="education__card-container">
@@ -82,7 +93,12 @@
       </div>
 
       <!-- PROJECTS SECTION -->
-      <section class="projects" id="projects">
+      <section
+        class="projects"
+        id="projects"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
         <h2 class="projects__title">Projects</h2>
         <p class="projects__text">Here are some of my projects</p>
         <div class="projects__card-container">
@@ -105,7 +121,12 @@
       </section>
 
       <!-- CONTACT SECTION -->
-      <section class="contact" id="contact">
+      <section
+        class="contact"
+        id="contact"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
         <h2 class="contact__title">Contact</h2>
         <form
           class="contact__form"
@@ -134,7 +155,7 @@
       </section>
     </main>
 
-    <aside class="accounts">
+    <aside class="accounts" data-aos="fade-right">
       <ul class="accounts__menu">
         <li class="accounts__item">
           <a
@@ -217,6 +238,10 @@
           if (input) input.value = savedColor;
         }
       });
+    </script>
+    <script src="assets/js/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
