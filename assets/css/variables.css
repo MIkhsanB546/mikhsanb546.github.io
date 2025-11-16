@@ -1,6 +1,6 @@
 :root {
   /* colors */
-  --base-color: #01010b;
+  --base-color: #0f1125;
   --surface-color: oklch(from var(--base-color) calc(l * 1.2) c h);
   --accent-color: oklch(from var(--base-color) calc(l * 3) calc(c * 5) h);
   --text-color: #f0f0f0;
