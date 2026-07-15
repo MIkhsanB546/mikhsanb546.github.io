@@ -1,24 +1,8 @@
 ---
-import "../styles/global.css";
+import Layout from '../layouts/layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1 class="text-3xl font-bold underline">
-			Hello world!
-		</h1>
-		<div id="box" class="w-20 h-20 bg-blue-500"></div>
-	</body>
-
-
-	<script>
-	</script>
-</html>
+<Layout>
+	<h1>Welcome to My Astro Site</h1>
+	<p>This is a simple page using the Layout component.</p>
+</Layout>
